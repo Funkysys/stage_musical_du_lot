@@ -1,0 +1,61 @@
+.navBarContainer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    max-width: 100vw;
+    z-index: 1000;
+    font-size: 1.3em;
+    background: #272727;
+}
+.nav {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.subNav {
+    opacity: 1;
+}
+.logoToggle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+}
+
+.toggleButton {
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+.aHome {
+    display: none;
+}
+@media screen and (min-width: 460px){
+    .navBarContainer {
+        font-size: 1.1em;
+        
+    }
+}
+
+@media screen and (min-width: 768px){
+    .navBarContainer {
+        font-size: 1.3em;
+    }
+    .subNav {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+}
+@media screen and (min-width: 992px) {
+    .logoToggle {
+        display:none;
+    }
+    .aHome {
+        display: block;
+        padding: 0;
+    }
+}

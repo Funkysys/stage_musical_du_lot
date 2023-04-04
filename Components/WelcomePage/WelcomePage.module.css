@@ -1,0 +1,116 @@
+.container {
+    background: #fbb764;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container h1 span {
+    font-family: 'Noto serif', 'Courier New', Courier, monospace;
+    color: aliceblue;
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+    font-size: 2em;
+}
+.container h2 {
+    font-family: 'Noto serif', 'Courier New', Courier, monospace;
+    color: aliceblue;
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+    opacity: 0;
+    border-radius: 10px;
+    background: #d06717;
+    padding: 0 10px;
+    margin-top: 15px;
+}
+.l {
+    position: relative;
+    top: 500px;
+    right: -500px;
+    opacity: 0;
+}
+.e {
+    position: relative;
+    top: -500px;
+    right: -500px;
+    opacity: 0;
+}
+.s {
+    position: relative;
+    top: -500px;
+    opacity: 0;
+}
+.t {
+    position: relative;
+    right: 500px;
+    top: 500px;
+    opacity: 0;
+}
+.a {
+    position: relative;
+    right: 500px;
+    top: -500px;
+    opacity: 0;
+}
+.g {
+    position: relative;
+    top: -500px;
+    opacity: 0;
+}
+.e2 {
+    position: relative;
+    top: 500px;
+    opacity: 0;
+}
+.m {
+    position: relative;
+    right: -500px;
+    top: 500px;
+    opacity: 0;
+}
+.u {
+    position: relative;
+    top: -500px;
+    right: 500px;
+    opacity: 0;
+}
+.s2 {
+    position: relative;
+    top: 500px;
+    right: -500px;
+    opacity: 0;
+}
+.i {
+    position: relative;
+    top: -500px;
+    opacity: 0;
+}
+.c {
+    position: relative;
+    top: -500px;
+    right: 500px;
+    opacity: 0;
+}
+.a2 {
+    position: relative;
+    top: 500px;
+    opacity: 0;
+}
+.l2 {
+    position: relative;
+    right: 500px;
+    top: 500px;
+    opacity: 0;
+}
+
+@media screen and (min-width: 1081px) {
+    .container h1 span {
+        font-size: 2.5em;
+    }
+    .title2 {
+        font-size: 4.5em;
+    }
+}
