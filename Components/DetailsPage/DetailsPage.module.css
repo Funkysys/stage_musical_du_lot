@@ -1,6 +1,5 @@
 .container {
     width: 100vw;
-    height: auto;
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -81,7 +80,7 @@
 @media screen and (min-width: 1920px) {
 
     .container {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .titleDetails {

@@ -1,7 +1,7 @@
 .TeamContainer {
     position: relative;
     width: 100vw;
-    height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -121,7 +121,6 @@
 
 @media screen and (min-width: 1920px) {
     .TeamContainer {
-        height: 100vh;
         flex-direction: column;
     }
 

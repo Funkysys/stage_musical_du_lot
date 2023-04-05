@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './Footer.module.css'
+import { useForm } from "react-hook-form";
 
 const Footer = () => {
     const [toggle, setToggle] = useState()
@@ -10,53 +11,91 @@ const Footer = () => {
     const [emailRequired, setEmailRequired] = useState(true)
     const [nameRequired, setNameRequired] = useState(true)
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSended, setIsSended] = useState(false);
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm();
+
     const handleOnClick = () => {
         setToggle(!toggle)
     }
-    const handleOnSubmit = async () => {
-        event.preventDefault()
-        const data = {
-            name,
-            email,
-            message
-        }
-        const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-        if (data.email && data.email.match(mailformat)) {
-            setEmailRequired(true)
-        } else {
-            return setEmailRequired(false)
-        }
-        if (data.name) {
-            setNameRequired(true)
-        } else {
-            return setNameRequired(false)
-        }
-        const endpoint = '/api/contact'
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+
+    const onSubmitHandler = async (data) => {
+        if (!isLoading) {
+            setIsLoading(true);
+
+            const endpoint = '/api/contact'
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(data)
-        }
-        const response = await fetch(endpoint, options)
-            if (response.status === 200) {
-                setSubmitted(true)
-                setName('')
-                setEmail('')
-                setMessage('')
+            }
+            const response = await fetch(endpoint, options)
+
+            const result = await response.json();
+            console.log(response);
+            setIsLoading(false);
+
+            if (!response.ok) {
+
             } else {
-                <h3>Veuillez réessayer plus tard</h3>
+                reset();
+                setIsSended(true);
             }
         }
+    };
+    // const handleOnSubmit = async () => {
+    //     event.preventDefault()
+    //     const data = {
+    //         name,
+    //         email,
+    //         message
+    //     }
+    //     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    //     if (data.email && data.email.match(mailformat)) {
+    //         setEmailRequired(true)
+    //     } else {
+    //         return setEmailRequired(false)
+    //     }
+    //     if (data.name) {
+    //         setNameRequired(true)
+    //     } else {
+    //         return setNameRequired(false)
+    //     }
+    //     const endpoint = '/api/contact'
+    //     const options = {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     }
+    //     const response = await fetch(endpoint, options)
+    //     console.log(response);
+    //     if (response.status === 200) {
+    //         setSubmitted(true)
+    //         setName('')
+    //         setEmail('')
+    //         setMessage('')
+    //     } else {
+    //         <h3>Veuillez réessayer plus tard</h3>
+    //     }
+    // }
 
     return (
         toggle ?
             <div className={styles.contactContainer}>
                 <button className={styles.closeButton} onClick={handleOnClick}>X</button>
-                {!submitted ?
+                {!isSended ?
                     <>
-                        < form className={styles.main} >
+                        < form className={styles.main} onSubmit={handleSubmit(onSubmitHandler)}>
                             < div className={styles.inputGroup} >
                                 < label htmlFor='name' className={styles.inputLabel}>Nom</label>
                                 {!nameRequired && <p className='text-danger fs-6'>Votre nom est obligatoire</p>}
@@ -64,7 +103,9 @@ const Footer = () => {
                                     type='text'
                                     name='name'
                                     className={styles.inputField}
-                                    onChange={(e) => { setName(e.target.value) }}
+                                    {...register("name", {
+                                        required: true,
+                                    })}
                                 />
                             </div>
                             < div className={styles.inputGroup} >
@@ -74,7 +115,9 @@ const Footer = () => {
                                     type='email'
                                     name='email'
                                     className={styles.inputField}
-                                    onChange={(e) => { setEmail(e.target.value) }}
+                                    {...register("email", {
+                                        required: true,
+                                    })}
                                 />
                             </div>
                             < div className={styles.inputGroup} >
@@ -83,16 +126,20 @@ const Footer = () => {
                                     type='text'
                                     name='message'
                                     className={styles.textArea}
-                                    onChange={(e) => { setMessage(e.target.value) }}
+                                    {...register("message", {
+                                        required: true,
+                                    })}
                                 />
                             </div>
-                            < button
-                                type='submit'
-                                onClick={handleOnSubmit}
-                                className={styles.submitButton}
-                            >
-                                Envoyer
-                            </button>
+                            {!isLoading && (
+                                < button
+                                    type='submit'
+                                    // onClick={handleOnSubmit}
+                                    className={styles.submitButton}
+                                >
+                                    Envoyer
+                                </button>
+                            )}
                         </form >
                     </>
                     :
