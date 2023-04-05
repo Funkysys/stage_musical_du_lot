@@ -71,7 +71,7 @@ const InformationsPage = () => {
                 <div ref={pRef1} className={styles.pDetailsContainer}>
                     <p className={styles.paragraphe}>Participation à la semaine de stage :</p>
                     <p>{`- 375€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
-                    <p>{`- 325€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
+                    <p>{`- 325€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
                     <p>{`Participation à la journée possible, nous contacter.`}</p>
                     <a target='_blank' href='/assets/pdf/description_2023.pdf'>Fiche Description</a >
                     <a target='_blank' href='/assets/pdf/fiche_pédago_2023.docx.pdf'>Contenu Pédagogique</a >
@@ -112,7 +112,7 @@ const InformationsPage = () => {
             <div className={styles.part}>
                 <h3 className={styles.infosSubTitle}>{`L'hébergement`}</h3>
                 <div ref={pRef4} className={styles.pDetailsContainer}>
-                    <p>{`Nous ne prenons pas en charge l'hébergement durant le stage mais nous vous conseillons de vous renseigner au prèt de `}
+                    <p>{`Nous ne prenons pas en charge l'hébergement durant le stage mais nous vous conseillons de vous renseigner au près de `}
                         <a href='https://www.cajarc.fr/decouverte/tourisme/hebergements' target='_blank'>{`l'office de tourisme de Cajarc`}</a>
                     </p>
                 </div>
