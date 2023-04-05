@@ -40,7 +40,6 @@ const Footer = () => {
             const response = await fetch(endpoint, options)
 
             const result = await response.json();
-            console.log(response);
             setIsLoading(false);
 
             if (!response.ok) {
@@ -51,43 +50,6 @@ const Footer = () => {
             }
         }
     };
-    // const handleOnSubmit = async () => {
-    //     event.preventDefault()
-    //     const data = {
-    //         name,
-    //         email,
-    //         message
-    //     }
-    //     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-    //     if (data.email && data.email.match(mailformat)) {
-    //         setEmailRequired(true)
-    //     } else {
-    //         return setEmailRequired(false)
-    //     }
-    //     if (data.name) {
-    //         setNameRequired(true)
-    //     } else {
-    //         return setNameRequired(false)
-    //     }
-    //     const endpoint = '/api/contact'
-    //     const options = {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(data)
-    //     }
-    //     const response = await fetch(endpoint, options)
-    //     console.log(response);
-    //     if (response.status === 200) {
-    //         setSubmitted(true)
-    //         setName('')
-    //         setEmail('')
-    //         setMessage('')
-    //     } else {
-    //         <h3>Veuillez réessayer plus tard</h3>
-    //     }
-    // }
 
     return (
         toggle ?
