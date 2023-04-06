@@ -15,7 +15,7 @@ export default function Home() {
         <meta name="description" content="Bienvenue dans un stage autour des musiques improvisés centré sur la bienveillance et la créativité. hâte de vous y voir !" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
-          http-equiv="Content-Security-Policy"
+          httpEquiv="Content-Security-Policy"
           content="default-src 'self'; img-src https://*; child-src 'none';" />
 
         <meta name="robots" content="all" />
