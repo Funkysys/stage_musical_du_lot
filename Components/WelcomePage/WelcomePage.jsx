@@ -21,6 +21,7 @@ const WelcomePage = () => {
     const a2Ref = useRef()
     const l2Ref = useRef()
     const h2Ref = useRef()
+    const titleDateRef = useRef()
 
     useEffect(() => {
         setWidth(window.innerHeight)
@@ -54,6 +55,7 @@ const WelcomePage = () => {
             TL.to(h2Ref.current, { fontSize: "2.5em"}, '-=0.2')
         }
         TL.to(h2Ref.current, { boxShadow: "10px 10px 10px black, -1px -1px 2px rgba(0, 0, 0, 0.8), -1px 1px 2px rgba(0, 0, 0, 0.8), 1px -1px 2px rgba(0, 0, 0, 0.8)"}, '-=0.2')
+        TL.to(titleDateRef.current, { top: '0', opacity: '1'}, '-=0.5')
     }
     }, [ready])
     return (
@@ -75,6 +77,7 @@ const WelcomePage = () => {
                 <span ref={l2Ref} className={styles.l2}>l </span>
             </h1>
             <h2 className={styles.title2} ref={h2Ref}>Du Lot</h2>
+            <h3 className={styles.titleDate} ref={titleDateRef}>Du 7 au 11 août 2023</h3>
         </div>
     )
 }

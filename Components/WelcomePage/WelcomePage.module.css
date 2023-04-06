@@ -105,6 +105,16 @@
     top: 500px;
     opacity: 0;
 }
+.titleDate {
+    position: relative;
+    font-family: 'Noto serif', 'Courier New', Courier, monospace;
+    color: aliceblue;
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+    font-size: 1.8em;
+    margin-top: 30px;
+    opacity: 0;
+    /* top: 500px; */
+}
 
 @media screen and (min-width: 1081px) {
     .container h1 span {
@@ -112,5 +122,8 @@
     }
     .title2 {
         font-size: 4.5em;
+    }
+    .titleDate {
+        font-size: 2.5em;
     }
 }
