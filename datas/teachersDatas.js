@@ -22,8 +22,8 @@ const team = [
         ],
         descrLinks: [
             {
-                title: "",
-                link: ""
+                title: "Instgram de Sacha Le Roy",
+                link: "https://www.instagram.com/sachaleroymusic/?hl=fr"
             }
         ],
         photo: '/assets/images/sacha.jpg',
