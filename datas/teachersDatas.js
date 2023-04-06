@@ -16,7 +16,7 @@ const team = [
     },
     {
         id: 2,
-        name: "Sacha Leroy",
+        name: "Sacha Le Roy",
         bio: [
             "Sacha Le Roy est un bassiste aux influences multiples, inspiré aussi bien par le jazz et l’improvisation que par le rock et les musiques du monde. Cette ouverture d’esprit est essentielle à sa pédagogie qui n’hésite pas à faire le pont entre différentes traditions. Chaque style a ses codes, mais chacun a son style ! La pulsation intérieure, le phrasé et l’intention mise dans une suite de notes, mais aussi le langage corporel du musicien comme partie intégrante de l’improvisation : autant de notions sur lesquelles il aime s’appuyer afin de faire ressortir la personnalité de chacun à travers son expression musicale."
         ],
