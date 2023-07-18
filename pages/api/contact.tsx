@@ -28,7 +28,6 @@ export default async function handler(
 		return;
 	}
 
-
 	const messages = message
 		.replace(/\n/g, "<br>")
 		.replace(/\r/g, "<br>")

@@ -1,11 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import styles from './TeamPage.module.css'
 import Image from 'next/image'
 
 const TeacherDescr = ({ elt }) => {
     const [toggle, setToggle] = useState(false)
-    const descrRef = useRef()
-    const linkRef = useRef()
 
     const handleOnClick = () => {
         setToggle(!toggle)
@@ -30,11 +28,11 @@ const TeacherDescr = ({ elt }) => {
                         <p>+</p>
                     </button>
                 </div>
-                <div ref={descrRef} className={toggle ? styles.activeDescr : styles.description}>
+                <div className={toggle ? styles.activeDescr : styles.description}>
                     <p>{elt.bio}</p>
                 </div>
             </div>
-            <div ref={linkRef} className={toggle ? styles.activeDescr : styles.links}>
+            <div className={toggle ? styles.activeDescr : styles.links}>
                 {
                     elt.descrLinks.length > 1 ?
                         (
@@ -49,13 +47,13 @@ const TeacherDescr = ({ elt }) => {
                             }
                             )
                         )
-                        : 
+                        :
                         <a
-                        key={elt.id * Math.random()}
-                        href={`https://${elt.descrLinks[0].link}`} target='_blank'>
-                                {elt.descrLinks[0].title}
-                            </a>
-                        
+                            key={elt.id * Math.random()}
+                            href={`https://${elt.descrLinks[0].link}`} target='_blank'>
+                            {elt.descrLinks[0].title}
+                        </a>
+
                 }
             </div>
         </div>

@@ -34,7 +34,7 @@ const NavbarContainer = () => {
                                 <Nav.Link eventKey="3" href="/#programme" className='mx-5'>Programme</Nav.Link>
                                 <Navbar.Brand href="#home"  className={styles.aHome}>
                                     <Image
-                                        alt=""
+                                        alt="logo de in extremis"
                                         src="/assets/images/logo-asso.png"
                                         width="120"
                                         height="90"

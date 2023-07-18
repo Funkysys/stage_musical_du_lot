@@ -70,7 +70,27 @@
     margin-right: 5px;
     font-size: 0.75em;
 }
+.links {
+    margin-top: -20px;
+    font-size: 0.8em;
+}
 
+.linksCategories {
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+.linksYoutube, .linksPdf {
+    margin-top: -8px;
+}
+.linksYoutube a, .linksPdf a {
+    color: #975300;
+}
+.linksYoutube a:hover, .linksPdf a:hover {
+    color: #fbb764;
+}
+.linksPdf {
+    margin-bottom: 30px;
+}
 @media screen and (min-width: 1080px) {
     .content {
         font-size: 1em;
