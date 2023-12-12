@@ -14,7 +14,7 @@ const TeamPage = ({ summer }) => {
 
     useEffect(() => {
         gsap.to(containerRef.current, {
-            background: summer ? "#fde1bf" : "#bce7ff",
+            background: summer ? "#fde1bf" : "rgb(71, 174, 230)",
             duration: '1.2',
             scrollTrigger: {
                 trigger: containerRef.current
