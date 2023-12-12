@@ -14,7 +14,6 @@ import winterDatas from '@/datas/detailsWinterDatas'
 
 const HomePage = () => {
     const [summer, setSummer] = useState(true)
-    console.log(summer);
     return (
         <div className={styles.container} >
             <div className={styles.radio}>
@@ -38,7 +37,7 @@ const HomePage = () => {
             {
             !summer && <DetailsPage summer={summer} datas={winterDatas} />
             }
-            <TeamPage />
+            <TeamPage summer={summer}/>
             <InformationsPage summer={summer} />
             <Footer />
         </div>

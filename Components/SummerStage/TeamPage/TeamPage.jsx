@@ -38,7 +38,7 @@ const TeamPage = ({ summer }) => {
         background: "#fde1bf"
     }
     const winterBG = {
-        background: "#bce7ff"
+        background: "rgb(71, 174, 230)"
     }
 
     return (
@@ -48,7 +48,7 @@ const TeamPage = ({ summer }) => {
             className={styles.TeamContainer}
             style={summer ? summerBG : winterBG}
         >
-            <h2 ref={titleRef} className={styles.teamTitle}>{`L'équipe Pédagogique`}</h2>
+            <h2 ref={titleRef} className={styles.teamTitle} style={{color: !summer &&"#f3dbbd"}}>{`L'équipe Pédagogique`}</h2>
             <div ref={cardContainerRef} className={styles.cardContainer}>
                 {team.map(elt => {
                     return (
