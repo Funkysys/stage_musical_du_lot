@@ -93,9 +93,13 @@ const InformationsPage = ({ summer }) => {
                         </>
                     }
                     <p>{`Participation à la journée possible, nous contacter.`}</p>
-                    <a target='_blank' href='/assets/pdf/description_2023.pdf'>Fiche Description</a >
-                    <a target='_blank' href='/assets/pdf/fiche_pédago_2023.docx.pdf'>Contenu Pédagogique</a >
-                    <a target='_blank' href='/assets/pdf/formulaire_inscription.pdf'>{`Formulaire d'inscription`}</a >
+                    {
+                        summer && <>
+                            <a target='_blank' href='/assets/pdf/description_2023.pdf'>Fiche Description</a >
+                            <a target='_blank' href='/assets/pdf/fiche_pédago_2023.docx.pdf'>Contenu Pédagogique</a >
+                        </>
+                    }
+                    <a target='_blank' href={summer ? '/assets/pdf/formulaire_inscription.pdf' : '/assets/pdf/pre-inscription-stage-hiver.pdf'}>{`Formulaire d'inscription`}</a >
                 </div>
             </div>
             <div className={styles.part}>
