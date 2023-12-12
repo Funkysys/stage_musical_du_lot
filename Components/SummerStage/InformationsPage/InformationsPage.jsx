@@ -3,7 +3,7 @@ import styles from './InformationsPage.module.css'
 import Image from 'next/image'
 import gsap from 'gsap'
 
-const InformationsPage = () => {
+const InformationsPage = ({ summer }) => {
 
     const containerRef = useRef()
     const titleRef = useRef()
@@ -12,6 +12,12 @@ const InformationsPage = () => {
     const pRef2 = useRef()
     const pRef3 = useRef()
     const pRef4 = useRef()
+    const summerBG = {
+        background: "#bce7ff"
+    }
+    const winterBG = {
+        background: "#fde1bf"
+    }
 
     useEffect(() => {
         gsap.to(containerRef.current, {
@@ -64,18 +70,32 @@ const InformationsPage = () => {
     }, [])
 
     return (
-        <div id="informations" ref={containerRef} className={styles.infosContainer}>
-            <h2 ref={titleRef} className={styles.infosTitle}>Informations</h2>
+        <div
+            id="informations"
+            ref={containerRef}
+            className={styles.infosContainer}
+            style={summer ? summerBG : winterBG}
+        >
+            <h2 ref={titleRef} className={styles.infosTitle}>Informations {summer ? "Été" : "Hiver"}</h2>
             <div className={styles.part}>
                 <h3 className={styles.infosSubTitle}>Coût du stage</h3>
                 <div ref={pRef1} className={styles.pDetailsContainer}>
                     <p className={styles.paragraphe}>Participation à la semaine de stage :</p>
-                    <p>{`- 375€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
-                    <p>{`- 325€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
+                    {summer ?
+                        <>
+                            <p>{`- 375€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
+                            <p>{`- 325€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
+                        </>
+                        :
+                        <>
+                            <p>{`- 270€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
+                            <p>{`- 250€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
+                        </>
+                    }
                     <p>{`Participation à la journée possible, nous contacter.`}</p>
                     <a target='_blank' href='/assets/pdf/description_2023.pdf'>Fiche Description</a >
                     <a target='_blank' href='/assets/pdf/fiche_pédago_2023.docx.pdf'>Contenu Pédagogique</a >
-                    <a target='_blank' href='/assets/pdf/formulaire_inscription.pdf'>Formulaire d'inscription</a >
+                    <a target='_blank' href='/assets/pdf/formulaire_inscription.pdf'>{`Formulaire d'inscription`}</a >
                 </div>
             </div>
             <div className={styles.part}>

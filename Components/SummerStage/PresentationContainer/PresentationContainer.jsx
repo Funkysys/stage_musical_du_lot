@@ -5,15 +5,22 @@ import gsap from 'gsap'
 import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
-const PresentationContainer = () => {
+const PresentationContainer = ({ summer }) => {
   const boxRef = useRef()
   const titleRef = useRef()
   const pRef = useRef()
   const imageRef = useRef()
 
+  const summerBG = {
+    background: "#bce7ff"
+  }
+  const winterBG = {
+    background: "#fde1bf"
+  }
+
   useEffect(() => {
     gsap.to(boxRef.current, {
-      background: "#bce7ff",
+      background: summer ? "#bce7ff" : "#fde1bf",
       duration: '1.2',
       scrollTrigger: {
         trigger: boxRef.current
@@ -45,7 +52,12 @@ const PresentationContainer = () => {
     })
   }, [])
   return (
-    <div id="presentation" ref={boxRef} className={styles.presentationContainer}>
+    <div
+      id="presentation"
+      ref={boxRef}
+      className={styles.presentationContainer}
+      style={summer ? summerBG : winterBG}
+    >
       <h2 ref={titleRef} className={styles.title}>Présentation</h2>
       <div ref={pRef} className={styles.paragraph}>
         <p >{`L’association In Extremis est très heureuse de présenter son stage musical qui cette année accueillera quatre musiciens professionnels : `}</p>

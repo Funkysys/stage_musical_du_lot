@@ -7,34 +7,47 @@ import team from '@/datas/teachersDatas'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const TeamPage = () => {
+const TeamPage = ({ summer }) => {
     const containerRef = useRef()
     const titleRef = useRef()
     const cardContainerRef = useRef()
 
     useEffect(() => {
         gsap.to(containerRef.current, {
-            background: "#fde1bf",
+            background: summer ? "#fde1bf" : "#bce7ff",
             duration: '1.2',
             scrollTrigger: {
                 trigger: containerRef.current
             }
         })
-        gsap.to(titleRef.current, {opacity: 1, right: '0', duration: '1.2',
-        scrollTrigger: {
-            trigger: containerRef.current
-        }})
-        gsap.to(cardContainerRef.current, {opacity: 1, top: '0', duration: '1.2',
-        scrollTrigger: {
-            trigger: containerRef.current
-        }})
+        gsap.to(titleRef.current, {
+            opacity: 1, right: '0', duration: '1.2',
+            scrollTrigger: {
+                trigger: containerRef.current
+            }
+        })
+        gsap.to(cardContainerRef.current, {
+            opacity: 1, top: '0', duration: '1.2',
+            scrollTrigger: {
+                trigger: containerRef.current
+            }
+        })
     }, [])
 
-
-    
+    const summerBG = {
+        background: "#fde1bf"
+    }
+    const winterBG = {
+        background: "#bce7ff"
+    }
 
     return (
-        <div ref={containerRef} id="equipe" className={styles.TeamContainer}>
+        <div
+            ref={containerRef}
+            id="equipe"
+            className={styles.TeamContainer}
+            style={summer ? summerBG : winterBG}
+        >
             <h2 ref={titleRef} className={styles.teamTitle}>{`L'équipe Pédagogique`}</h2>
             <div ref={cardContainerRef} className={styles.cardContainer}>
                 {team.map(elt => {

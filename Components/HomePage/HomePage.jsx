@@ -1,24 +1,45 @@
-import React, { useLayoutEffect, useRef } from 'react'
+'use client'
+import { useState } from 'react'
+import { Button } from 'react-bootstrap'
 import styles from './HomePage.module.css'
-import gsap from 'gsap'
-import WelcomePage from '../WelcomePage/WelcomePage'
-import PresentationPage from '../PresentationContainer/PresentationContainer'
-import ProgrammePage from '../ProgrammePage/ProgammePage'
-import DetailsPage from '../DetailsPage/DetailsPage'
-import TeamPage from '../TeamPage/TeamPage'
-import InformationsPage from '../InformationsPage/InformationsPage'
-import Footer from '../Footer/Footer'
+import WelcomePage from '../SummerStage/WelcomePage/WelcomePage'
+import PresentationPage from '../SummerStage/PresentationContainer/PresentationContainer'
+import ProgrammePage from '../SummerStage/ProgrammePage/ProgammePage'
+import DetailsPage from '../SummerStage/DetailsPage/DetailsPage'
+import TeamPage from '../SummerStage/TeamPage/TeamPage'
+import InformationsPage from '../SummerStage/InformationsPage/InformationsPage'
+import Footer from '../SummerStage/Footer/Footer'
+import summerDatas from '@/datas/detailsDatas'
+import winterDatas from '@/datas/detailsWinterDatas'
 
 const HomePage = () => {
-    
+    const [summer, setSummer] = useState(true)
+    console.log(summer);
     return (
-        <div className={styles.container}>
-            <WelcomePage />
-            <PresentationPage />
-            <ProgrammePage />
-            <DetailsPage />
+        <div className={styles.container} >
+            <div className={styles.radio}>
+                <Button
+                    id='1'
+                    name='Summer'
+                    type='checkbox'
+                    variant={summer ? "primary" : "warning"}
+                    value={summer ? "summer" : "winter"}
+                    onClick={() => setSummer(!summer)}
+                >
+                    {summer ? "☀️ Été" : "❄️ Hiver"}
+                </Button>
+            </div>
+            <WelcomePage summer={summer}/>
+            <PresentationPage summer={summer}/>
+            <ProgrammePage summer={summer}/>
+            {summer &&
+                <DetailsPage summer={summer} datas={summerDatas} />
+            }
+            {
+            !summer && <DetailsPage summer={summer} datas={winterDatas} />
+            }
             <TeamPage />
-            <InformationsPage />
+            <InformationsPage summer={summer} />
             <Footer />
         </div>
     )

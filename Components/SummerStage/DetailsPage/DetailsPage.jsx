@@ -2,11 +2,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import styles from './DetailsPage.module.css'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import gsap from 'gsap'
-import datas from '@/datas/detailsDatas'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const DetailsPage = () => {
+const DetailsPage = ({ datas, summer }) => {
     const [toggle, setToggle] = useState(false)
     const [content, setContent] = useState([datas[0]])
     const containerRef = useRef()
@@ -16,6 +15,13 @@ const DetailsPage = () => {
     const pRef2 = useRef()
     const descrRef = useRef()
     const linkRef = useRef()
+
+    const summerBG = {
+        background: "#bce7ff"
+    }
+    const winterBG = {
+        background: "#fde1bf"
+    }
 
     const handleOnClick = (el) => {
         setContent(el)
@@ -30,7 +36,7 @@ const DetailsPage = () => {
     }
     useEffect(() => {
         gsap.to(containerRef.current, {
-            background: "#bce7ff",
+            background: summer ? "#bce7ff" : "#fde1bf",
             duration: '1.2',
             scrollTrigger: {
                 trigger: containerRef.current
@@ -71,7 +77,11 @@ const DetailsPage = () => {
     }, [])
 
     return (
-        <div ref={containerRef} className={styles.container}>
+        <div
+            ref={containerRef}
+            className={styles.container}
+            style={summer ? summerBG : winterBG}
+        >
             <h2 ref={titleRef1} className={styles.titleDetails}>Détails des différents modules</h2>
             <div ref={pRef1} className={styles.pDetailsContainer}>
                 <div className={styles.pButtonsContainer}>
@@ -91,14 +101,14 @@ const DetailsPage = () => {
                             {content.links &&
                                 content.links.map(elt => {
                                     return (
-                                        <div className={styles.links}>
+                                        <div key={elt.id} className={styles.links}>
                                             <p className={styles.linksCategories}>{elt.categorie}</p>
                                             <p className={styles.linksYoutube}>
-                                                Youtube : 
+                                                Youtube :
                                                 <a target='_blank' href={elt.youtube}> {elt.name}</a >
                                             </p>
                                             <p className={styles.linksPdf}>
-                                                PDF : 
+                                                PDF :
                                                 <a target='_blank' href={elt.pdf}> {elt.name}</a >
                                             </p>
                                         </div>

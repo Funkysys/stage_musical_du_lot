@@ -5,13 +5,13 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const ProgammePage = () => {
+const ProgammePage = ({summer}) => {
     const containerRef = useRef()
     const titleProgRef = useRef()
     const pProgRef = useRef()
     useEffect(() => {
         gsap.to(containerRef.current, {
-            background: "#fde1bf",
+            background: summer ? "#fde1bf" : "#bce7ff",
             duration: '1.2',
             scrollTrigger: {
                 trigger: containerRef.current
@@ -34,8 +34,21 @@ const ProgammePage = () => {
             }
         })
     }, [])
+
+    const summerBG = {
+        background: "#fde1bf"
+    }
+    const winterBG = {
+        background: "#bce7ff"
+    }
+
     return (
-        <div id='programme' ref={containerRef} className={styles.containerProgramme}>
+        <div 
+        id='programme' 
+        ref={containerRef} 
+        className={styles.containerProgramme}
+        style={summer ? summerBG : winterBG}
+        >
             <h2 ref={titleProgRef} className={styles.titleProg}>{`Programme type d’une journée de stage :`}</h2>
             <div ref={pProgRef} className={styles.pProgContainer}>
                 <p>10h - 11h30 : RYTHME</p>

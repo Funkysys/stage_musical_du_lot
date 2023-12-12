@@ -44,25 +44,25 @@ const datas = [
     {
         id: '8',
         button: "PRÉPARÉ",
-        title: "REPERTOIRES PRÉPARÉ ÉTÉ",
+        title: "REPERTOIRES PRÉPARÉ HIVER",
         links: [
             {
-                name: "Love In Outer Space - Sun Ra",
+                name: "All Blues - Miles Davis",
                 youtube: "https://www.youtube.com/watch?v=3IzT7qnFt1A&ab_channel=SunRa-Topic",
                 pdf: "/assets/pdf/love_in_outer_space_sun_ra.pdf",
-                categorie: "Groove"
+                categorie: "Spécial Kind Of Blue"
             },
             {
-                name: "Moon River - Henry Mancini",
+                name: "Freddie the Freeloader - Miles Davis",
                 youtube: "https://www.youtube.com/watch?v=0BfUDyvdTSE&ab_channel=M%C3%B3da1342",
                 pdf: "/assets/pdf/moon_river_audrey_Hepburn-version.pdf",
-                categorie: "Standard de Brodway"
+                categorie: ""
             },
             {
-                name: "Ana Maria - Wayne Shorter",
+                name: "So What - Miles Davis",
                 youtube: "https://www.youtube.com/watch?v=YhQ0WufVf1U&ab_channel=PapaDudeness",
                 pdf: "/assets/pdf/AnaMaria.pdf",
-                categorie: "Morceau Open"
+                categorie: ""
             }
         ]
     },

@@ -59,7 +59,7 @@ const Footer = () => {
                     <>
                         < form className={styles.main} onSubmit={handleSubmit(onSubmitHandler)}>
                             < div className={styles.inputGroup} >
-                                < label htmlFor='name' className={styles.inputLabel}>Nom</label>
+                                <label htmlFor='name' className={styles.inputLabel}>Nom</label>
                                 {!nameRequired && <p className='text-danger fs-6'>Votre nom est obligatoire</p>}
                                 < input
                                     type='text'
