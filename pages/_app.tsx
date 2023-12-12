@@ -5,9 +5,10 @@ import { SSRProvider } from 'react-bootstrap'
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
+  const AnyComponent = Component as any;
   return (
     <SSRProvider>
-      <Component {...pageProps} />
+      <AnyComponent {...pageProps} />
       <Analytics />
     </SSRProvider>
   )
