@@ -48,20 +48,20 @@ const datas = [
         links: [
             {
                 name: "All Blues - Miles Davis",
-                youtube: "https://www.youtube.com/watch?v=3IzT7qnFt1A&ab_channel=SunRa-Topic",
-                pdf: "/assets/pdf/love_in_outer_space_sun_ra.pdf",
+                youtube: "https://www.youtube.com/watch?v=-488UORrfJ0&ab_channel=MilesDavisVEVO",
+                pdf: "/assets/images/all_blues.png",
                 categorie: "Spécial Kind Of Blue"
             },
             {
                 name: "Freddie the Freeloader - Miles Davis",
-                youtube: "https://www.youtube.com/watch?v=0BfUDyvdTSE&ab_channel=M%C3%B3da1342",
-                pdf: "/assets/pdf/moon_river_audrey_Hepburn-version.pdf",
+                youtube: "https://www.youtube.com/watch?v=ZZcuSBouhVA&ab_channel=MilesDavisVEVO",
+                pdf: "/assets/images/freddie.png",
                 categorie: ""
             },
             {
                 name: "So What - Miles Davis",
-                youtube: "https://www.youtube.com/watch?v=YhQ0WufVf1U&ab_channel=PapaDudeness",
-                pdf: "/assets/pdf/AnaMaria.pdf",
+                youtube: "https://www.lestagemusicaldulot.fr/",
+                pdf: "/assets/images/so_what.png",
                 categorie: ""
             }
         ]
