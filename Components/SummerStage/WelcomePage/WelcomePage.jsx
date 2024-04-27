@@ -86,8 +86,8 @@ const WelcomePage = ({summer}) => {
                 <span ref={l2Ref} className={styles.l2}>l </span>
             </h1>
             <h2 className={styles.title2} ref={h2Ref}>Du Lot</h2>
+            <h3 className={styles.titleDate} ref={titleDateRef2}>Stage Été Du 5 au 9 août 2024 </h3>
             <h3 className={styles.titleDate} ref={titleDateRef}>{`Stage d'Hiver Du 16 au 18 février 2024`}</h3>
-            <h3 className={styles.titleDate} ref={titleDateRef2}>Stage Été Du 5 au 9 août 2024 (MAJ en cours)</h3>
         </div>
     )
 }

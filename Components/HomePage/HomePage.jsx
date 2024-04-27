@@ -11,12 +11,13 @@ import InformationsPage from '../SummerStage/InformationsPage/InformationsPage'
 import Footer from '../SummerStage/Footer/Footer'
 import summerDatas from '@/datas/detailsDatas'
 import winterDatas from '@/datas/detailsWinterDatas'
+import NavbarContainer from '../NavbarContainer/NavbarContainer'
 
 const HomePage = () => {
     const [summer, setSummer] = useState(true)
     return (
         <div className={styles.container} >
-            <div className={styles.radio}>
+            <NavbarContainer>
                 <Button
                     id='1'
                     name='Summer'
@@ -27,17 +28,17 @@ const HomePage = () => {
                 >
                     {summer ? "☀️ Été" : "❄️ Hiver"}
                 </Button>
-            </div>
-            <WelcomePage summer={summer}/>
-            <PresentationPage summer={summer}/>
-            <ProgrammePage summer={summer}/>
+            </NavbarContainer>
+            <WelcomePage summer={summer} />
+            <PresentationPage summer={summer} />
+            <ProgrammePage summer={summer} />
             {summer &&
                 <DetailsPage summer={summer} datas={summerDatas} />
             }
             {
-            !summer && <DetailsPage summer={summer} datas={winterDatas} />
+                !summer && <DetailsPage summer={summer} datas={winterDatas} />
             }
-            <TeamPage summer={summer}/>
+            <TeamPage summer={summer} />
             <InformationsPage summer={summer} />
             <Footer />
         </div>

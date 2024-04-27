@@ -98,22 +98,32 @@ const DetailsPage = ({ datas, summer }) => {
                         <div className={styles.content}>
                             <p>{content.title}</p>
                             <p>{content.content}</p>
-                            {content.links &&
-                                content.links.map(elt => {
-                                    return (
-                                        <div key={elt.id} className={styles.links}>
-                                            <p className={styles.linksCategories}>{elt.categorie}</p>
-                                            <p className={styles.linksYoutube}>
-                                                Youtube :
-                                                <a target='_blank' href={elt.youtube}> {elt.name}</a >
-                                            </p>
-                                            <p className={styles.linksPdf}>
-                                                PDF :
-                                                <a target='_blank' href={elt.pdf}> {elt.name}</a >
-                                            </p>
-                                        </div>
-                                    )
-                                })
+                            {!summer ?
+                                content.links &&
+                                <>
+                                    {content.links.map(elt => {
+                                        return (
+                                            <div key={elt.id} className={styles.links}>
+                                                <p className={styles.linksCategories}>{elt.categorie}</p>
+                                                <p className={styles.linksYoutube}>
+                                                    Youtube :
+                                                    <a target='_blank' href={elt.youtube}> {elt.name}</a >
+                                                </p>
+                                                <p className={styles.linksPdf}>
+                                                    PDF :
+                                                    <a target='_blank' href={elt.pdf}> {elt.name}</a >
+                                                </p>
+                                            </div>
+                                        )
+                                    })
+                                    }
+                                </>
+                                :
+                                <div>
+                                    <div className={styles.links}>
+                                        <p className={styles.linksCategories}>{`Le programme arrive bientôt.`}</p>
+                                    </div>
+                                </div>
                             }
                         </div>
                     )
