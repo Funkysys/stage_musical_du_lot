@@ -132,7 +132,7 @@ const WelcomePage = ({ summer }) => {
         Du Lot
       </h2>
       <h3 className={styles.titleDate} ref={titleDateRef2}>
-        Stage Été Du 11 au 15 août 2025{" "}
+        Stage Été Du 4 au 8 août 2025{" "}
       </h3>
       <h3
         className={styles.titleDate}
