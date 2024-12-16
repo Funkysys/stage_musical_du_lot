@@ -1,6 +1,7 @@
 .containerProgramme {
   width: 100vw;
   height: 100vh;
+  padding: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
