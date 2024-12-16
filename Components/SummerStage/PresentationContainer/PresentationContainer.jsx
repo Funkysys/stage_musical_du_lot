@@ -111,17 +111,28 @@ const PresentationContainer = ({ summer }) => {
         >
           Grand Figeac Tourisme
         </a>
+        <a
+          target="_blank"
+          href="https://www.ladepeche.fr/2024/08/10/le-stage-de-musique-improvisee-fait-le-plein-12134909.php"
+        >
+          La dépèche : Le stage de musique improvisée fait le plein
+        </a>
       </div>
       <div ref={imageRef} className={styles.image}>
-        <Image
-          src="/assets/images/presse2.jpg"
-          fill
-          className={styles.customImg}
-          sizes="(max-width: 768px) 90vw,
+        <a
+          target="_blank"
+          href="https://www.ladepeche.fr/2024/08/10/le-stage-de-musique-improvisee-fait-le-plein-12134909.php"
+        >
+          <Image
+            src="/assets/images/stage_2025.jpg"
+            fill
+            className={styles.customImg}
+            sizes="(max-width: 768px) 90vw,
               (max-width: 1200px) 40vw,
               33vw"
-          alt="photo de la presse pour le stage"
-        />
+            alt="photo de la presse pour le stage"
+          />
+        </a>
       </div>
     </div>
   );

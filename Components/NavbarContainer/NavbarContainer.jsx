@@ -2,7 +2,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import Image from 'next/image';
 import styles from "./NavbarContainer.module.css"
 
-const NavbarContainer = () => {
+const NavbarContainer = ({ children }) => {
     return (
         <nav className={styles.navBarContainer}>
             <Navbar
@@ -32,7 +32,7 @@ const NavbarContainer = () => {
                             <div className={styles.subNav}>
                                 <Nav.Link href="#presentation" className='mx-5'>Présentation</Nav.Link>
                                 <Nav.Link eventKey="3" href="/#programme" className='mx-5'>Programme</Nav.Link>
-                                <Navbar.Brand href="#home"  className={styles.aHome}>
+                                <Navbar.Brand href="#home" className={styles.aHome}>
                                     <Image
                                         alt="logo de in extremis"
                                         src="/assets/images/logo-asso.png"
@@ -44,6 +44,9 @@ const NavbarContainer = () => {
                             </div>
                         </Nav>
                     </Navbar.Collapse>
+                </div>
+                <div className={styles.toggle}>
+                    {children}
                 </div>
             </Navbar >
         </nav >
