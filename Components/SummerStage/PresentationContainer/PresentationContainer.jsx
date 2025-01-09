@@ -80,13 +80,13 @@ const PresentationContainer = ({ summer }) => {
         Présentation
       </h2>
       <div ref={pRef} className={styles.paragraph}>
-        <p>{`L’association In Extremis est très heureuse de présenter son stage musical qui cette année accueillera quatre musiciens professionnels pour intervenir au près des stagiaires pour préparer les concerts de restitution : `}</p>
+        <p>{`L’association In Extremis est très heureuse de présenter son stage musical qui cette année accueillera quatre musiciens professionnels (selon les effectifs et contenus de stage) pour intervenir au près des stagiaires pour préparer les concerts de restitution : `}</p>
         <p>Antoine Delbos (batteur et compositeur),</p>
         <p>Robin Nitram (guitariste et compositeur),</p>
         <p>Sacha Le Roy (bassiste et compositeur) et</p>
         <p>Benjamin Aubry (saxophoniste et compositeur).</p>
         <p>Le stage en quelques mots : </p>
-        <p>{`Nous sommes très heureux de continuer cette aventure avec vous dans cette magnifique région qu’est le Lot. Le but de ce stage musical étant de partager notre passion de la musique et de donner à chacun.e l’envie de trouver sa voie à travers son parcours de musicien.ne.`}</p>
+        <p>{`Nous sommes très heureux de continuer cette aventure avec vous dans cette magnifique région qu’est le Lot. Le but de ce stage musical étant de partager notre passion de la musique et plus spécifiquement de l'improvisation ainsi que de donner à chacun.e l’envie de trouver sa voie à travers son parcours de musicien.ne.`}</p>
         <p>{`Ce stage est ouvert à toutes et à tous ceux qui désirent apprendre et s’exprimer à travers la musique vivante c’est à dire la pratique de son instrument, l’écoute collective et le partage avec les autres.`}</p>
       </div>
       <h2 ref={titleRef2} className={styles.title}>

@@ -54,18 +54,21 @@ const ProgammePage = ({ summer }) => {
         className={styles.titleProg}
       >{`Programme type d’une journée de stage :`}</h2>
       <div ref={pProgRef} className={styles.pProgContainer}>
-        <p className={styles.moment}>Matin : </p>
-        <p>Rythme</p>
-        <p>CHANT ET OREILLE</p>
+        <p className={styles.moment}>Matin : 10H - 13H </p>
+        <p>Rythme et harmonie</p>
+        <p>initiation à la composition et l’arrangement</p>
         <p className={styles.lunch}>13H - 14H30 : PAUSE DEJEUNER</p>
-        <p className={styles.moment}>Après-midi </p>
-        <p>COURS INDIVIDUELS et COURS THEMATIQUES</p>
-        <p>JEUX COLLECTIF</p>
+        <p className={styles.moment}>Après-midi : 14H30 - 18H </p>
+        <p>Improvisation tous style</p>
+        <p>
+          Thématique autour de compositions originales des professeurs complétée
+          par des morceaux de divers styles (funk, jazz...)
+        </p>
         <p>18h: JAM SESSION*</p>
-        <p>{`à noter : le programme peut évoluer selon le niveau et le nombre d’élèves.`}</p>
         <p
           className={styles.jam}
         >{`Jam Session* : Non obligatoire ni automatique, elle est mise en place selon la demande des élèves et à la discrétion des intervenants.`}</p>
+        <p>{`à noter : le programme peut évoluer selon les thématiques abordées et le nombre d’élèves.`}</p>
       </div>
     </div>
   );

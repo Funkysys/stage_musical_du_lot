@@ -55,8 +55,8 @@ const TeamPage = ({ summer }) => {
       <h2
         ref={titleRef}
         className={styles.teamTitle}
-        style={{ color: !summer && "#f3dbbd" }}
       >{`Notre Équipe d'intervenants musicaux`}</h2>
+      <h3>{`(équipe variable selon les stages et l'effectif)`}</h3>
       <div ref={cardContainerRef} className={styles.cardContainer}>
         {team.map((elt) => {
           return <TeacherDescr key={elt.id} elt={elt} />;
