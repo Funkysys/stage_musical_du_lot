@@ -49,7 +49,7 @@ export default function Home() {
         />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/images/stage.png" />
       </Head>
 
       <NavbarContainer />
