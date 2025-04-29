@@ -33,7 +33,7 @@ const InformationsPage = ({ title }) => {
       setShowTitle("Juillet");
       setDescriptionAndInscription([
         "/assets/pdf/description_2025_stage_juillet.pdf",
-        "/assets/pdf/formulaire_inscription_2024.pdf",
+        "/assets/pdf/formulaire_inscription_juillet25.pdf",
         "/assets/pdf/autorisation_parentale_2025.pdf",
         "/assets/pdf/autorisation_parentale_2025_image.pdf",
       ]);
@@ -156,7 +156,7 @@ const InformationsPage = ({ title }) => {
           {descriptionAndInscription[3] && (
             <Link
               target="_blank"
-              href={descriptionAndInscription[2]}
+              href={descriptionAndInscription[3]}
             >{`Autorisation parentale pour le droit à l'image`}</Link>
           )}
         </div>
@@ -175,7 +175,7 @@ const InformationsPage = ({ title }) => {
       <div className={styles.part}>
         <h3 className={styles.infosSubTitle}>Le lieu du stage</h3>
         <h4 className={styles.subSubTitle}>
-          Nouvelle Ecole de musique de Cajarc.{" "}
+          {"Nouvelle école de musique de Cajarc. "}
         </h4>
         <div className={styles.photo}>
           <Image
@@ -200,10 +200,10 @@ const InformationsPage = ({ title }) => {
         <div ref={pRef4} className={styles.pDetailsContainer}>
           <p>
             {`Nous ne prenons pas en charge l'hébergement durant le stage mais nous vous conseillons de vous renseigner au près de `}
-            <a
+            <Link
               href="https://www.cajarc.fr/decouverte/tourisme/hebergements"
               target="_blank"
-            >{`l'office de tourisme de Cajarc`}</a>
+            >{`l'office de tourisme de Cajarc`}</Link>
           </p>
         </div>
       </div>

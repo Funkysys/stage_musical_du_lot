@@ -69,8 +69,8 @@ const ProgammePage = ({ title }) => {
           Thématique autour du répertoire et de l’interprétation (jazz, pop,
           rock, funk, blues, chanson française, musique du monde, etc...)
         </p>
-        <p className={styles.jam}>18h: JAM SESSION*</p>
-        <p>{`Jam Session* : Non obligatoire ni automatique, elle est mise en place selon la demande des élèves et à la discrétion des intervenants.`}</p>
+        <p className={styles.jam}>18h : JAM SESSION*</p>
+        <p>{`Jam Session* : non obligatoire ni automatique, elle est mise en place selon la demande des élèves et à la discrétion des intervenants.`}</p>
         <p>{`à noter : le programme peut évoluer selon les thématiques abordées et le nombre d’élèves.`}</p>
       </div>
     </div>

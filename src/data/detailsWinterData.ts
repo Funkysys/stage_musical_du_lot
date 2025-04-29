@@ -4,7 +4,7 @@ const winterData = [
     button: "RYTHME",
     title: "MODULE AUTOUR DU RYTHME (en groupe)",
     content:
-      "ce premier module sera abordé tous les matins et tous ensemble. Il permet de souder le collectif en travaillant les différents débits rythmiques au métronome. Cela permet aussi de réveiller le corps et l'esprit de manière douce.",
+      "ce premier module sera abordé tous les matins et tous ensemble. Il permet de souder le collectif en travaillant les différents débits rythmiques au métronome. Cela permet aussi de réveiller le corps et l'esprit.",
   },
   {
     id: "2",
@@ -19,26 +19,26 @@ const winterData = [
     button: "COURS À THÈMES ",
     title: "COURS À THÈMES ",
     content:
-      "A lieu en parallèle des cours individuels. Ce module permet d’aborder différents sujets spécifiques (exemple : cohésion basse/batterie) qui demandent du détails à certains moments du stage pour certains instrumentistes.",
+      "Ce module permet d’aborder différents sujets spécifiques (exemple : cohésion basse/batterie) qui demandent du détails à certains moments du stage pour certains instrumentistes.",
   },
   {
     id: "5",
     button: "JEUX EN GROUPE",
     title: "JEUX EN GROUPE",
     content:
-      "cours basé sur le répertoire qui sera joué aux concerts de fin de stage. Travail des thèmes, travail des improvisations et répartition des rôles pour chaque instrument. Un des buts de cet atelier est d’installer une atmosphère professionnelle pour appréhender du mieux possible les concerts de fin de stage.",
+      "Cours basé sur le répertoire qui sera joué aux concerts de fin de stage. Travail des thèmes, travail des improvisations et répartition des rôles pour chaque instrument. Un des buts de cet atelier est d’installer une atmosphère professionnelle pour appréhender du mieux possible les concerts de fin de stage.",
   },
   {
     id: "6",
     button: "JAM SESSION",
     title: "JAM SESSION",
     content:
-      "temps de partage où les stagiaires jouent ensemble avec un professeur. Répertoire libre. Ambiance conviviale et bienveillante.",
+      "Temps de partage où les stagiaires jouent ensemble avec un professeur. Répertoire libre. Ambiance conviviale et bienveillante.",
   },
   {
     id: "7",
     button: "SUR PLACE",
-    title: "RÉPERTOIRES SUR PLACE",
+    title: "RÉPERTOIRE SUR PLACE",
     content:
       "Nous proposerons sur place de découvrir ou de redécouvrir des morceaux de différetents styles et époques. Ces morceaux seront travaillés en groupe et en individuel. Ils seront joués lors de la représentation de fin de stage.",
   },
