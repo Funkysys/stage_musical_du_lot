@@ -40,7 +40,7 @@ const winterData = [
     button: "SUR PLACE",
     title: "RÉPERTOIRE SUR PLACE",
     content:
-      "Nous proposerons sur place de découvrir ou de redécouvrir des morceaux de différetents styles et époques. Ces morceaux seront travaillés en groupe et en individuel. Ils seront joués lors de la représentation de fin de stage.",
+      "Nous proposerons sur place de découvrir ou de redécouvrir des morceaux de différents styles et époques. Ces morceaux seront travaillés en groupe et en individuel. Ils seront joués lors de la représentation de fin de stage.",
   },
   {
     id: "8",
