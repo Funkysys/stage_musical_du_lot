@@ -1,0 +1,159 @@
+.TeamContainer {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.cardContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  top: 500px;
+}
+
+.teacherCard {
+  position: relative;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffecdb;
+  width: 70%;
+  margin: 30px 0;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.interContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.teamTitle {
+  position: relative;
+  right: 500px;
+  opacity: 0;
+  border-bottom: 2px solid #bce7ff;
+  margin-top: 20px;
+}
+
+.photo {
+  width: 90%;
+  max-height: 40%;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+
+.customImg {
+  object-fit: contain;
+  width: 100%;
+  position: relative !important;
+}
+
+.addDescr button {
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  border-radius: 50%;
+  border: none;
+  font-size: 2em;
+  background: #f69525;
+  color: aliceblue;
+}
+
+.addDescr button:hover {
+  background: #975300;
+}
+
+.activeBtn button {
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  border-radius: 50%;
+  border: none;
+  font-size: 2em;
+  color: aliceblue;
+  background: #975300;
+}
+
+.description {
+  display: none;
+  opacity: 0;
+}
+
+.activeDescr {
+  display: block;
+  opacity: 1;
+}
+
+.links {
+  display: none;
+  opacity: 0;
+}
+.linkContent {
+  color: blue;
+  text-decoration: underline;
+}
+
+.activeLinks {
+  display: block;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1920px) {
+  .TeamContainer {
+    flex-direction: column;
+  }
+
+  .teamTitle {
+    font-size: 2.5em;
+  }
+
+  .cardContainer {
+    flex-direction: row;
+  }
+
+  .teacherCard {
+    height: 70vh;
+    width: 30%;
+  }
+
+  .addDescr {
+    display: none;
+  }
+
+  .description {
+    display: block;
+    opacity: 1;
+  }
+
+  .links {
+    display: block;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    color: #0086ce;
+  }
+}
