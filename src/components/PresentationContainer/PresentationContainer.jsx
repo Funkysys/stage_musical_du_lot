@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import styles from "./PresentationContainer.module.css";
 
@@ -11,9 +12,11 @@ const PresentationContainer = ({ title }) => {
   const boxRef = useRef();
   const titleRef = useRef();
   const titleRef2 = useRef();
+  const titleRef3 = useRef();
   const pRef = useRef();
   const pRef2 = useRef();
   const imageRef = useRef();
+  const videoRef = useRef();
   const [background, setBackground] = useState("#bce7ff");
 
   useEffect(() => {
@@ -74,6 +77,22 @@ const PresentationContainer = ({ title }) => {
         trigger: boxRef.current,
       },
     });
+    gsap.to(titleRef3.current, {
+      opacity: "1",
+      right: "0",
+      duration: "1.2",
+      scrollTrigger: {
+        trigger: boxRef.current,
+      },
+    });
+    gsap.to(videoRef.current, {
+      opacity: "1",
+      bottom: "0",
+      duration: "1.2",
+      scrollTrigger: {
+        trigger: boxRef.current,
+      },
+    });
   }, []);
   return (
     <div
@@ -96,37 +115,37 @@ const PresentationContainer = ({ title }) => {
         <p>{`Nous sommes très heureux de continuer cette aventure avec vous dans cette magnifique région qu’est le Lot. Le but de ces stages musicaux étant de partager notre passion de la musique et plus spécifiquement de l'improvisation ainsi que de donner à chacun.e l’envie de trouver sa voie à travers son parcours de musicien.ne.`}</p>
         <p>{`Ces stages sont ouverts à toutes et à tous ceux qui désirent apprendre et s’exprimer à travers la musique vivante c’est à dire la pratique de son instrument, l’écoute collective et le partage avec les autres.`}</p>
       </div>
-      <h2 ref={titleRef2} className={styles.title}>
+      <h2 ref={titleRef2} className={`${styles.title} mt-15`}>
         Ils en parlent :
       </h2>
       <div ref={pRef2} className={styles.paragraph}>
-        <a
+        <Link
           target="_blank"
           href="https://www.ladepeche.fr/2023/08/22/un-tres-beau-bilan-du-stage-de-musique-improvisee-11408165.php"
         >
           Cajarc. Un très beau bilan du stage de musique improvisée
-        </a>
-        <a
+        </Link>
+        <Link
           target="_blank"
           href="https://www.ladepeche.fr/2023/06/26/un-stage-de-musique-improvisee-avec-in-extremis-11301554.php"
         >
           Cajarc. Un stage de musique improvisée avec IN Extremis
-        </a>
-        <a
+        </Link>
+        <Link
           target="_blank"
           href="https://www.tourisme-figeac.com/offres/stage-de-musique-improvisee-cajarc-fr-4263380/"
         >
           Grand Figeac Tourisme
-        </a>
-        <a
+        </Link>
+        <Link
           target="_blank"
           href="https://www.ladepeche.fr/2024/08/10/le-stage-de-musique-improvisee-fait-le-plein-12134909.php"
         >
           La dépèche : Le stage de musique improvisée fait le plein
-        </a>
+        </Link>
       </div>
       <div ref={imageRef} className={styles.image}>
-        <a
+        <Link
           target="_blank"
           href="https://www.ladepeche.fr/2024/08/10/le-stage-de-musique-improvisee-fait-le-plein-12134909.php"
         >
@@ -139,7 +158,24 @@ const PresentationContainer = ({ title }) => {
               33vw"
             alt="photo de la presse pour le stage"
           />
-        </a>
+        </Link>
+      </div>
+      <div className="mt-15 ">
+        <h2 ref={titleRef3} className={styles.title}>
+          À quoi ça ressemble ? :
+        </h2>
+        <div ref={videoRef} className="mt-15">
+          <iframe
+            width="1080"
+            height="608"
+            src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );
