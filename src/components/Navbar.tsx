@@ -6,7 +6,6 @@ import { useContext } from "react";
 
 const Navbar: React.FC = () => {
   const { title, setTitle, changeDataSource } = useContext(DataContext);
-  console.log("Navbar title", title);
 
   return (
     <nav className="bg-slate-900 w-full text-white flex justify-center px-2 md:px-6 fixed top-0 z-50">
@@ -72,8 +71,8 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       {/* Small screen */}
-      <div className="md:hidden flex w-full justify-between items-center">
-        <div className="flex flex-col">
+      <div className="md:hidden flex w-full justify-between items-center text-sm">
+        <div className="flex flex-col space-y-1">
           <Link href="#presentation">
             <button className="hover:text-cyan-200 mb-1 px-2 rounded-md w-full border-b">{`Présentation`}</button>
           </Link>

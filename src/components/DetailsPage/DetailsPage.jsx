@@ -20,7 +20,6 @@ const DetailsPage = () => {
 
   const [background, setBackground] = useState("#bce7ff");
 
-  console.log(data);
 
   useEffect(() => {
     if (title === "august") {
