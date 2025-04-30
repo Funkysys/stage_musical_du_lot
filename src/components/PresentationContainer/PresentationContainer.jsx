@@ -165,16 +165,42 @@ const PresentationContainer = ({ title }) => {
           À quoi ça ressemble ? :
         </h2>
         <div ref={videoRef} className="mt-15">
-          <iframe
-            width="1080"
-            height="608"
-            src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+          <div className="md:hidden">
+            <iframe
+              width="450"
+              height="260"
+              src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div className="hidden md:block lg:hidden">
+            <iframe
+              width="720"
+              height="405"
+              src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div className="hidden xl:block">
+            <iframe
+              width="1080"
+              height="602"
+              src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
