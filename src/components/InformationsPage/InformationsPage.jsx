@@ -18,6 +18,8 @@ const InformationsPage = ({ title }) => {
   const [descriptionAndInscription, setDescriptionAndInscription] = useState([
     "/assets/pdf/description_2025_stage_juillet.pdf",
     "/assets/pdf/formulaire_inscription_juillet25.pdf",
+    "/assets/pdf/autorisation_parentale_2025.pdf",
+    "/assets/pdf/autorisation_parentale_2025_image.pdf",
   ]);
 
   useEffect(() => {
@@ -27,6 +29,8 @@ const InformationsPage = ({ title }) => {
       setDescriptionAndInscription([
         "/assets/pdf/description_august_2025.pdf",
         "/assets/pdf/formulaire_august_inscription_2025.pdf",
+        "/assets/pdf/autorisation_parentale_aout2025.pdf",
+        "/assets/pdf/autorisation_parentale_aout2025_image.pdf",
       ]);
     } else if (title === "july") {
       setBackground("#CEFFBC");
