@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./Footer.module.css";
 
@@ -39,6 +39,8 @@ const Footer = () => {
         body: JSON.stringify(data),
       };
       const response = await fetch(endpoint, options);
+
+      console.log(response);
 
       const result = await response.json();
       setIsLoading(false);
@@ -108,11 +110,7 @@ const Footer = () => {
               />
             </div>
             {!isLoading && (
-              <button
-                type="submit"
-                // onClick={handleOnSubmit}
-                className={styles.submitButton}
-              >
+              <button type="submit" className={styles.submitButton}>
                 Envoyer
               </button>
             )}

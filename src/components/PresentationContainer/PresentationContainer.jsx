@@ -171,10 +171,10 @@ const PresentationContainer = ({ title }) => {
               height="260"
               src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div className="hidden md:block lg:hidden">
@@ -183,10 +183,10 @@ const PresentationContainer = ({ title }) => {
               height="405"
               src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div className="hidden xl:block">
@@ -195,10 +195,10 @@ const PresentationContainer = ({ title }) => {
               height="602"
               src="https://www.youtube.com/embed/JID9BO9zPFs?si=C71u0adGZV_00and"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
