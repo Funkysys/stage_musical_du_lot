@@ -122,6 +122,12 @@
   flex-direction: column;
 }
 
+@media screen and (min-width: 1081px) {
+  .teamTitle {
+    font-size: 2.5em;
+  }
+}
+
 @media screen and (min-width: 1920px) {
   .TeamContainer {
     flex-direction: column;
