@@ -114,12 +114,16 @@
 }
 .titleDate {
   position: relative;
-  font-family: "Noto serif", "Courier New", Courier, monospace;
+  font-family: s "Noto serif", "Courier New", Courier, monospace;
   color: aliceblue;
   text-shadow: 1px 1px 3px black, -1px -1px 3px black;
   font-size: 1.8em;
   margin-top: 30px;
   opacity: 0;
+}
+
+.titleDate span {
+  color: rgb(247, 220, 148);
 }
 
 @media screen and (min-width: 1081px) {

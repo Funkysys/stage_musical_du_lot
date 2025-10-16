@@ -1,17 +1,17 @@
 const team = [
-  {
-    id: 1,
-    name: "Benjamin Aubry",
-    bio: "Benjamin est saxophoniste de formation, son approche de la musique est diversifiée. Il s’attache à faire découvrir une multitude de voies à travers son enseignement. La voix est son outil de prédilection pour aborder les différentes cultures rythmiques et mélodiques. Participer à sa proposition est avant tout corporel, vibrant. C’est de ce point de départ que les notions théoriques viennent soutenir cette démarche immersive et participative, accessible au plus grand nombre. L’issue n’est pas connu d’avance, ce qui accompagne et forge l’autonomie des élèves, et laisse une grande part à la créativité.",
-    descrLinks: [
-      {
-        title: "Chyzm - Sirto",
-        link: "https://youtu.be/HeWjaIQJmLw?si=JH9VbPf0JADtRmOm",
-      },
-    ],
-    photo: "/assets/images/ben.jpg",
-    alt: "Benjamin Aubry",
-  },
+  // {
+  //   id: 1,
+  //   name: "Benjamin Aubry",
+  //   bio: "Benjamin est saxophoniste de formation, son approche de la musique est diversifiée. Il s’attache à faire découvrir une multitude de voies à travers son enseignement. La voix est son outil de prédilection pour aborder les différentes cultures rythmiques et mélodiques. Participer à sa proposition est avant tout corporel, vibrant. C’est de ce point de départ que les notions théoriques viennent soutenir cette démarche immersive et participative, accessible au plus grand nombre. L’issue n’est pas connu d’avance, ce qui accompagne et forge l’autonomie des élèves, et laisse une grande part à la créativité.",
+  //   descrLinks: [
+  //     {
+  //       title: "Chyzm - Sirto",
+  //       link: "https://youtu.be/HeWjaIQJmLw?si=JH9VbPf0JADtRmOm",
+  //     },
+  //   ],
+  //   photo: "/assets/images/ben.jpg",
+  //   alt: "Benjamin Aubry",
+  // },
   {
     id: 2,
     name: "Sacha Le Roy",

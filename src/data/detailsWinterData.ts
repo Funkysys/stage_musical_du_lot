@@ -46,28 +46,7 @@ const winterData = [
     id: "8",
     button: "PRÉPARÉ",
     title: "REPERTOIRES PRÉPARÉ HIVER",
-    links: [
-      {
-        name: "Liste à venir",
-        youtube:
-          "https://www.youtube.com/watch?v=-488UORrfJ0&ab_channel=MilesDavisVEVO",
-        pdf: "/assets/images/all_blues.png",
-        categorie: "Spécial Kind Of Blue",
-      },
-      {
-        name: "Freddie the Freeloader - Miles Davis",
-        youtube:
-          "https://www.youtube.com/watch?v=ZZcuSBouhVA&ab_channel=MilesDavisVEVO",
-        pdf: "/assets/images/freddie.png",
-        categorie: "",
-      },
-      {
-        name: "So What - Miles Davis",
-        youtube: "https://www.lestagemusicaldulot.fr/",
-        pdf: "/assets/images/so_what.png",
-        categorie: "",
-      },
-    ],
+    links: [],
   },
 ];
 

@@ -1,6 +1,7 @@
 import { DataContext } from "@/utils/dataContext";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./DetailsPage.module.css";
 
@@ -19,7 +20,6 @@ const DetailsPage = () => {
   const linkRef = useRef();
 
   const [background, setBackground] = useState("#bce7ff");
-
 
   useEffect(() => {
     if (title === "august") {
@@ -111,11 +111,27 @@ const DetailsPage = () => {
             <p>{content.title}</p>
             <p>{content.content}</p>
             {content.links && (
-              <div className={styles.links}>
-                <p
-                  className={styles.linksCategories}
-                >{`Le programme arrive bientôt.`}</p>
-              </div>
+              <>
+                {content.links.length > 0 ? (
+                  content.links.map((link, index) => (
+                    <div className={styles.links} key={index} ref={linkRef}>
+                      <p className={styles.linksPdf}>
+                        <Link href={link.pdf}>{link.name}</Link>
+                      </p>
+                      <p className={styles.linksYoutube}>
+                        Youtube :{" "}
+                        <Link href={link.youtube}>{link.youtube}</Link>
+                      </p>
+                    </div>
+                  ))
+                ) : (
+                  <div className={styles.links} ref={linkRef}>
+                    <p className={styles.linksPdf}>
+                      Le programme arrive bientôt
+                    </p>
+                  </div>
+                )}
+              </>
             )}
           </div>
         )}

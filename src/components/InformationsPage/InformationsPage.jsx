@@ -45,8 +45,10 @@ const InformationsPage = ({ title }) => {
       setBackground("#bce7ff");
       setShowTitle("Hiver");
       setDescriptionAndInscription([
-        "assets/pdf/plaquette_stage_février_2025.pdf",
-        "/assets/pdf/formulaire_inscription_hiver25.pdf",
+        "/assets/pdf/description_hiver_2026_compressed.pdf",
+        "/assets/pdf/formulaire_inscription_hiver26.pdf",
+        "/assets/pdf/autorisation_parentale_fevrier2026.pdf",
+        "/assets/pdf/autorisation_parentale_fevrier2026_image.pdf",
       ]);
     }
   }, [title]);
@@ -108,7 +110,7 @@ const InformationsPage = ({ title }) => {
       style={{ background: background }}
     >
       <h2 ref={titleRef} className={styles.infosTitle}>
-        Informations {showTitle} 2025
+        Informations {showTitle} 2026
       </h2>
       <div className={styles.part}>
         <h3 className={styles.infosSubTitle}>Coût du stage</h3>
@@ -118,14 +120,15 @@ const InformationsPage = ({ title }) => {
           </p>
           {title === "august" && (
             <>
-              <p>{`- 375€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
-              <p>{`- 325€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
+              <p>{`- 400€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
+              <p>{`- 350€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
+              <p>{`- 300€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc de moins de 16 ans.`}</p>
             </>
           )}
           {title === "july" && (
             <>
-              <p>{`- 270€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
-              <p>{`- 250€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
+              <p>{`- 300€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
+              <p>{`- 275€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
               <p>
                 {`- 150€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc de moins `}
                 <span style={{ textDecoration: "underline" }}>de 16 ans.</span>
@@ -134,8 +137,8 @@ const InformationsPage = ({ title }) => {
           )}
           {title === "winter" && (
             <>
-              <p>{`- 270€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
-              <p>{`- 250€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
+              <p>{`- 300€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) `}</p>
+              <p>{`- 275€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc.`}</p>
               <p>
                 {`- 150€ (dont 10€ d'adhésion à l'association organisatrice In Extremis) pour les adhérents à l'école de musique de Cajarc de moins `}
                 <span style={{ textDecoration: "underline" }}>de 16 ans.</span>

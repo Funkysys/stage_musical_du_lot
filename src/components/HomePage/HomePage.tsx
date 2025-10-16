@@ -150,16 +150,17 @@ const WelcomePage = () => {
         Du Lot
       </h2>
       <h3 className={styles.titleDate} ref={titleDateRef2}>
-        {"Stage D'Aout Du 4 au 8 août 2025 "}
+        {"Stage D'Aout Du 10 au 14 août 2026 "}
       </h3>
       <h3
         className={styles.titleDate}
         ref={titleDateRef3}
-      >{`Stage de Juillet Du 23 au 25 Juillet 2025`}</h3>
-      <h3
-        className={styles.titleDate}
-        ref={titleDateRef}
-      >{`Stage d'Hiver Du 21 au 23 février 2025`}</h3>
+      >{`Stage de Juillet Du 24 au 26 Juillet 2026`}</h3>
+      <h3 className={styles.titleDate} ref={titleDateRef}>
+        {`Stage d'Hiver Du 27 février au 1er mars 2026`}
+        <br />
+        <span>SPECIAL BLUES !</span>
+      </h3>
     </div>
   );
 };
