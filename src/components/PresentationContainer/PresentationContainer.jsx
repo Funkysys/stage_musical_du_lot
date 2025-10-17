@@ -109,7 +109,6 @@ const PresentationContainer = ({ title }) => {
         <p>Antoine Delbos (batteur et compositeur),</p>
         <p>Robin Nitram (guitariste et compositeur),</p>
         <p>Sacha Le Roy (bassiste et compositeur) et</p>
-        <p>Benjamin Aubry (saxophoniste et compositeur).</p>
         <p>Alexandre Cajarc de Lagarrigue (saxophoniste).</p>
         <p>Le stage en quelques mots : </p>
         <p>{`Nous sommes très heureux de continuer cette aventure avec vous dans cette magnifique région qu’est le Lot. Le but de ces stages musicaux étant de partager notre passion de la musique et plus spécifiquement de l'improvisation ainsi que de donner à chacun.e l’envie de trouver sa voie à travers son parcours de musicien.ne.`}</p>
