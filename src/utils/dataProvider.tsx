@@ -12,11 +12,11 @@ const DataProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const { setData, loading, setLoading, error, setError } =
     useContext(DataContext);
-  const [currentData, setCurrentData] = useState<dataType[]>(julyData);
+  const [currentData, setCurrentData] = useState<dataType[]>(winterData);
   const [dataSource, setDataSource] = useState<"august" | "july" | "winter">(
-    "july"
+    "winter"
   );
-  const [title, setTitle] = useState<string>("july");
+  const [title, setTitle] = useState<string>("winter");
 
   const memoizedSetLoading = useCallback(setLoading, [setLoading]);
   const memoizedSetError = useCallback(setError, [setError]);
