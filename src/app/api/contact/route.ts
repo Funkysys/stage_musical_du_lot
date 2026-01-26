@@ -28,7 +28,7 @@ export async function POST(req: Request) {
       .replace(/\t/g, "<br>")
       .replace(/<(?!br\s*\/?)[^>]+>/g, "");
 
-    sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
     const sendGridMail = {
       to: process.env.ADMIN_EMAIL as string,
