@@ -31,7 +31,7 @@ export async function POST(req: Request) {
       .replace(/<(?!br\s*\/?)[^>]+>/g, "");
 
     await resend.emails.send({
-      from: `Stage Musical du Lot <${process.env.FROM_EMAIL}>`,
+      from: "Stage Musical du Lot <contact@stagemusicaldulot.fr>",
       to: process.env.ADMIN_EMAIL as string,
       replyTo: email,
       subject: `Nouveau message de ${name}`,
