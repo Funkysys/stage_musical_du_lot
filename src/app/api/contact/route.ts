@@ -1,5 +1,7 @@
-import sgMail from "@sendgrid/mail";
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
@@ -9,7 +11,7 @@ export async function POST(req: Request) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { message: "INVALID_PARAMETER" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -18,7 +20,7 @@ export async function POST(req: Request) {
     if (!pattern.test(email)) {
       return NextResponse.json(
         { message: "EMAIL_SYNTAX_INCORRECT" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -28,30 +30,29 @@ export async function POST(req: Request) {
       .replace(/\t/g, "<br>")
       .replace(/<(?!br\s*\/?)[^>]+>/g, "");
 
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
-
-    const sendGridMail = {
+    await resend.emails.send({
+      from: `Stage Musical du Lot <${process.env.FROM_EMAIL}>`,
       to: process.env.ADMIN_EMAIL as string,
-      from: process.env.ADMIN_EMAIL as string,
-      templateId: "d-87afce6c828f4181b087c284897a51c1",
-      dynamic_template_data: {
-        name: name,
-        email: email,
-        message: messages,
-      },
-    };
-
-    await sgMail.send(sendGridMail);
+      replyTo: email,
+      subject: `Nouveau message de ${name}`,
+      html: `
+        <h2>Nouveau message de contact</h2>
+        <p><strong>Nom:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${messages}</p>
+      `,
+    });
 
     return NextResponse.json(
-      { message: "EMAIL_SENDED_SUCCESSFULLY" },
-      { status: 200 }
+      { message: "EMAIL_SENT_SUCCESSFULLY" },
+      { status: 200 },
     );
   } catch (error) {
     console.error(error);
     return NextResponse.json(
-      { message: "ERROR_WITH_SENDGRID" },
-      { status: 500 }
+      { message: "ERROR_SENDING_EMAIL" },
+      { status: 500 },
     );
   }
 }

@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sendgrid/mail": "^8.1.5",
     "gsap": "^3.12.7",
     "next": "^15.5.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hook-form": "^7.56.1"
+    "react-hook-form": "^7.56.1",
+    "resend": "^6.8.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
